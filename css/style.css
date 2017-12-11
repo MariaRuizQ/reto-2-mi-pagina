@@ -1,160 +1,110 @@
-/* menú hamburguesa */
-.main-hamburger {
-  position: absolute;
-  top: 25px;
-  right: 28px;
-  height: 2px;
-  width: 24px;
-  background: #d0d0d0;
-}
-
-.main-hamburger::before, .main-hamburger::after {
-  position: absolute;
-  content: '';
-  height: 2px;
-  width: 24px;
-  display: block;
-  background: #d0d0d0;
-}
-
-.main-hamburger::before {
-  top: -8px;
-}
-
-.main-hamburger::after {
-  top: 8px;
-}
-/* fin de menú hamburguesa */
-
-* {
+*{
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
   margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
 }
 
-.bg-reverse {
-  background-color: #383e42;
-  color: #ffffff;
+.text-upp{
+  text-transform: uppercase;
 }
 
-a {
-  color: inherit;
-  font-size: inherit;
+/*header*/
+.cabecera{
+
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  font-weight: 500;
+  display: table;
+  overflow: hidden; /*aplico esto, para que se recorte, pero mi contenido se mantenga visible*/
+  position: fixed; /*le doy una posición fija a mi cabecera*/
+  z-index: 1000;
+}
+
+/*
+Aplico al div, que engloba todo el contenido del header
+*/
+.contenedor:before, .contenedor:after{
+  display: table; /*definimos un cuadro a nivel del bloque*/
+  content: "";
+}
+
+/*Fijamos los bloques que deseamos se mantengan dentro de ellos,
+para que al aplicar position no salgan de ahí
+*/
+.fijando-cajas:before, .fijando-cajas:after{
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.contenedor{
+  margin: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: table;
+  height: 80px;
+  width: 100%;
+  background-image: url("../assets/imagenes/fondo2.jpg");
+
+}
+
+.cabecera .logo-palabra{
+  color: 	rgba(169,3,41,1);
   text-decoration: none;
-
-}
-
-nav {
-  padding: 14px;
+  font-size: 200%;
+  font-weight: 700;
   overflow: hidden;
+  line-height: 100px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.nav-left {
-  font-size: 1.25rem;
+.cabecera .barra-menu{
   float: left;
-  padding-left: 35px;
+  font-size: 14px;
 }
 
-.nav-right {
-  float: right;
-}
-
-h1 {
-  font-size: 6rem;
-  font-weight: 300;
-}
-
-h2 {
-  font-size: 3.5rem;
-  font-weight: 300;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.bg-header {
-  background-image: url("../assets/images/header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 5rem 0;
-}
-
-.text-rock, figure {
-  color: #393939;
-  padding: 3rem 4.5rem;
-  display: inline-block;
-  align-self: center;
-}
-
-.text-rock p {
-  line-height: 1.5;
-}
-
-.img-circle {
-  border-radius: 50%;
-  width: 100%;
-}
-
-footer {
-  padding: 3rem;
-}
-
-.col-section {
-  width: 100%;
-}
-
-.view-mobile {
-  display: block;
-}
-
-.view-desktop {
+.cabecera .barra-menu ul{
   display: none;
 }
 
-/* estilos solo para desktop*/
-ul li {
-  display: inline-block;
-  padding: 5px 15px;
+.img-principal{
+  width: 100%;
+  background-image: url('assets/imagenes/foto-principal.jpg');
 }
-
-@media (min-width: 768px) {
-   .col-section {
-    width: 50%;
-    float: left;
-  }
-
-  section {
-    overflow: auto;
-    display: flex;
-  }
-
-  .text-rock {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .overlay {
-    padding: 10rem 0;
-  }
-
-  .view-mobile {
+@media (min-width: 768px){
+  a{
     display: none;
   }
-
-  .view-desktop {
-    display: block;
-  }
 }
 
-@media (min-width: 1200px) {
-  section{
-    margin: 0 10rem;
-  }
+.cabecera .barra-menu ul{
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  float: left;
+  margin-left: 30%;
+}
+
+.cabecera .barra-menu ul li{
+  float: left;
+  display: table;
+  height: 80px;
+  margin: 10px;
+}
+
+.cabecera .barra-menu ul li a{
+  color: rgba(169,3,41,1);
+  font-weight: 900;
+  font-size: 20px;
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cabecera .barra-menu ul li a:hover{
+  color: 	#228B22;
+  font-weight: 900;
 }
