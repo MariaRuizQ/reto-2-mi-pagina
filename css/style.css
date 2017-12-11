@@ -22,6 +22,9 @@
   z-index: 1000;
 }
 
+.nav{
+
+}
 /*
 Aplico al div, que engloba todo el contenido del header
 */
@@ -53,10 +56,10 @@ para que al aplicar position no salgan de ahí
 .cabecera .logo-palabra{
   color: 	rgba(169,3,41,1);
   text-decoration: none;
-  font-size: 200%;
+  font-size: 180%;
   font-weight: 700;
   overflow: hidden;
-  line-height: 100px;
+  line-height: 80px;
   display: table-cell;
   vertical-align: middle;
 }
@@ -94,18 +97,38 @@ para que al aplicar position no salgan de ahí
 
 main{
   width: 100%;
-  padding-top: 600px;
+  padding-top: 100px;
   text-align: center;
   justify-content: center;
 }
 
 .information{
-  width: 80%;
+  width: 90%;
   margin: 5%;
+}
+.information p{
+  text-align: justify;
+  padding-bottom: 5%;
+}
+.information button{
+  border: none;
+  background: gray;
+  padding: 10px;
+  font-size: 30px;
+}
+.photo{
+  width: 80%;
+  height: 150px;
+}
+.date{
+  background-image: url('../assets/imagenes/fondo3.jpg');
 }
 @media (min-width: 768px){
   .nav-movil{
     display: none;
+  }
+  .cabecera .logo-palabra{
+    font-size: 300%;
   }
   .cabecera .barra-menu{
     display: inline-block;
