@@ -69,10 +69,26 @@ para que al aplicar position no salgan de ahí
 .cabecera .barra-menu ul{
   display: none;
 }
-
+.cabecera .barra-menu ul li{
+  display: none;
+}
+.cabecera .barra-menu ul li a{
+  display: none;
+}
 .img-principal{
   width: 100%;
-  background-image: url('assets/imagenes/foto-principal.jpg');
+  height: 400px;
+  background-image: url('../assets/imagenes/foto-principal.jpg');
+  display: table;
+}
+
+.img-principal p{
+  font-size: 50px;
+  font-weight: 700;
+  color: #990000;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 @media (min-width: 768px){
   a{
